@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>数据预处理:one-hot encoding | 郑桂东的学习地</title>
+  <title>gbdt | 郑桂东的学习地</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="One-Hot Encodingone-hot编码，又称为一位有效编码，对任意给定的状态，状态向量中只有一位为1，其余各位为0。主要是采用N位状态寄存器来对N个状态进行编码，每个状态都由他独立的寄存器位，并且在任意时候只有一位有效。这种状态机的速度与状态的数量无关，只取决于某特定状态的转移数量，速度很快。当状态机的状态增加时，如果使用二编码，那么速度会明显下降，但如果采用独热码，虽然多用了触发器，">
+  <meta name="description" content="BoostingBoosting是彝族可将弱学习器提升为强学习器的算法.这族算法的工作机制类似:先从初始训练集训练出一个基学习器,在根据学习器的表现对训练样本分布进行调整,使得先前基学习器做错的训练样本在后续受到更多关注,然后基于调整后的样本分布来训练下一个基学习器;如此重复进行,直至基学习器数目达到事先指定的值T,最终将这T个基学习器进行权结合.
+GBDTGBDT(Gradient Boosti">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据预处理:one-hot encoding">
-<meta property="og:url" content="http://yoursite.com/2016/12/14/encoding/index.html">
+<meta property="og:title" content="gbdt">
+<meta property="og:url" content="http://yoursite.com/2017/01/06/gbdt/index.html">
 <meta property="og:site_name" content="郑桂东的学习地">
-<meta property="og:description" content="One-Hot Encodingone-hot编码，又称为一位有效编码，对任意给定的状态，状态向量中只有一位为1，其余各位为0。主要是采用N位状态寄存器来对N个状态进行编码，每个状态都由他独立的寄存器位，并且在任意时候只有一位有效。这种状态机的速度与状态的数量无关，只取决于某特定状态的转移数量，速度很快。当状态机的状态增加时，如果使用二编码，那么速度会明显下降，但如果采用独热码，虽然多用了触发器，">
-<meta property="og:updated_time" content="2016-12-15T08:01:51.508Z">
+<meta property="og:description" content="BoostingBoosting是彝族可将弱学习器提升为强学习器的算法.这族算法的工作机制类似:先从初始训练集训练出一个基学习器,在根据学习器的表现对训练样本分布进行调整,使得先前基学习器做错的训练样本在后续受到更多关注,然后基于调整后的样本分布来训练下一个基学习器;如此重复进行,直至基学习器数目达到事先指定的值T,最终将这T个基学习器进行权结合.
+GBDTGBDT(Gradient Boosti">
+<meta property="og:updated_time" content="2017-01-08T12:15:23.057Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据预处理:one-hot encoding">
-<meta name="twitter:description" content="One-Hot Encodingone-hot编码，又称为一位有效编码，对任意给定的状态，状态向量中只有一位为1，其余各位为0。主要是采用N位状态寄存器来对N个状态进行编码，每个状态都由他独立的寄存器位，并且在任意时候只有一位有效。这种状态机的速度与状态的数量无关，只取决于某特定状态的转移数量，速度很快。当状态机的状态增加时，如果使用二编码，那么速度会明显下降，但如果采用独热码，虽然多用了触发器，">
+<meta name="twitter:title" content="gbdt">
+<meta name="twitter:description" content="BoostingBoosting是彝族可将弱学习器提升为强学习器的算法.这族算法的工作机制类似:先从初始训练集训练出一个基学习器,在根据学习器的表现对训练样本分布进行调整,使得先前基学习器做错的训练样本在后续受到更多关注,然后基于调整后的样本分布来训练下一个基学习器;如此重复进行,直至基学习器数目达到事先指定的值T,最终将这T个基学习器进行权结合.
+GBDTGBDT(Gradient Boosti">
   
     <link rel="alternate" href="/atom.xml" title="郑桂东的学习地" type="application/atom+xml">
   
@@ -63,16 +66,12 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-encoding" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-gbdt" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/12/14/encoding/" class="article-date">
-  <time datetime="2016-12-14T10:38:34.000Z" itemprop="datePublished">2016-12-14</time>
+    <a href="/2017/01/06/gbdt/" class="article-date">
+  <time datetime="2017-01-06T09:25:04.000Z" itemprop="datePublished">2017-01-06</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/杂/">杂</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -81,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      数据预处理:one-hot encoding
+      gbdt
     </h1>
   
 
@@ -89,46 +88,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="One-Hot-Encoding"><a href="#One-Hot-Encoding" class="headerlink" title="One-Hot Encoding"></a>One-Hot Encoding</h3><p>one-hot编码，又称为一位有效编码，对任意给定的状态，状态向量中只有一位为1，其余各位为0。主要是采用N位状态寄存器来对N个状态进行编码，每个状态都由他独立的寄存器位，并且在任意时候只有一位有效。这种状态机的速度与状态的数量无关，只取决于某特定状态的转移数量，速度很快。当状态机的状态增加时，如果使用二编码，那么速度会明显下降，但如果采用独热码，虽然多用了触发器，但由于状态译码简单，节省和简化了组合逻辑电路。<br>一个四种状态：A，B，C，D<br>独热编码就为：0001,0010,0100,1000</p>
-<p>在实际的机器学习的应用任务中，特征有时候并不总是连续值，有可能是一些分类值，如性别可分为“male”和“female”。在机器学习任务中，对于这样的特征，通常需要对其进行特征数字化，如有如下三个特征属性：</p>
-<pre><code>* 性别：[&quot;male&quot;，&quot;female&quot;]
- * 地区：[&quot;Europe&quot;，&quot;US&quot;，&quot;Asia&quot;]
-* 浏览器：[&quot;Firefox&quot;，&quot;Chrome&quot;，&quot;Safari&quot;，&quot;Internet Explorer&quot;]
-</code></pre><p>性别的属性是二维的，地区是三维的，浏览器则是四维的，这样，可以采用One-Hot编码的方式对上述的样本“[“male”，”US”，”Internet Explorer”]”编码，“male”则对应着[1，0]，同理“US”对应着[0，1，0]，“Internet Explorer”对应着[0,0,0,1]。则完整的特征数字化的结果为：[1,0,0,1,0,0,0,0,1]。这样导致的一个结果就是数据会变得非常的稀疏。</p>
-<pre><code>from sklearn import preprocessing
-enc = preprocessing.OneHotEncoder()
-enc.fit([[0,0,3],[1,1,0],[0,2,1],[1,0,2]])
-array = enc.transform([[0,1,3]]).toarray()
-print array 
-</code></pre><p>结果：[[ 1.  0.  0.  1.  0.  0.  0.  0.  1.]]</p>
+        <h2 id="Boosting"><a href="#Boosting" class="headerlink" title="Boosting"></a>Boosting</h2><p>Boosting是彝族可将弱学习器提升为强学习器的算法.这族算法的工作机制类似:先从初始训练集训练出一个基学习器,在根据学习器的表现对训练样本分布进行调整,使得先前基学习器做错的训练样本在后续受到更多关注,然后基于调整后的样本分布来训练下一个基学习器;如此重复进行,直至基学习器数目达到事先指定的值T,最终将这T个基学习器进行权结合.</p>
+<h2 id="GBDT"><a href="#GBDT" class="headerlink" title="GBDT"></a>GBDT</h2><p>GBDT(Gradient Boosting Decision Tree)是一种迭代的决策树算法,该算法由多棵决策树组成,通过所有树进行投票来进行分类.这是一种泛化能力(generalization)比较强的算法.</p>
+<p>GBDT是一个加性回归模型,通过boosting迭代的构造一组弱学习器,相对LR的优势,如不需要做特征的归一化,自动进行特征选择,模型可解释性比较好,可以适应多种损失函数如,Squareloss,LogLoss等.每一次建立模型是在之前建立模型的损失函数的梯度下降方向<br>GBDT的核心在于,每一棵树学的是之前所有树结论和的残差,残差为与预测值的差值.</p>
+<h2 id="随机森林-Random-Forest"><a href="#随机森林-Random-Forest" class="headerlink" title="随机森林(Random Forest)"></a>随机森林(Random Forest)</h2><p>随机森林是Bagging的一个扩展变体.RF在以决策树为基学习器构建Bagging集成 的基础上,进一步在决策树的训练过程中引入了随机属性选择.传统决策树在选择划分属性时是在当前结点的属性集合(假定有d个属性)中选择一个最优属性;而在随机森林中,对基决策树的每个结点,先从该结点的属性集合中随机选择一个包含k个属性的子集,然后再从这个子集中选择一个最优属性用户划分.一个情况下,k=log2d</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/14/encoding/" data-id="cixsx586t0003g5jih7aga0yv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/06/gbdt/" data-id="cixsx586r0002g5jilfuyxqet" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/read/">read</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2016/12/15/ufldl-softmax/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/01/10/pythonnote/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          ufldl_softmax
+          pythonnote
         
       </div>
     </a>
   
   
-    <a href="/2016/12/13/ubuntu-windows同步hexo/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/01/05/vsm/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">ubuntu&amp;windows同步hexo</div>
+      <div class="article-nav-title">vsm</div>
     </a>
   
 </nav>

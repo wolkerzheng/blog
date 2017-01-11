@@ -19,7 +19,7 @@
 
 去掉取值变化小的特征 Removing features with low variance
 单变量特征选择Univariate feature selection  单变量特征选择能够对每一个特征进行测试，衡量该特征和响应变量之间的关系，根据得分舍去不好的特征">
-<meta property="og:updated_time" content="2016-12-21T14:22:48.828Z">
+<meta property="og:updated_time" content="2017-01-05T10:50:45.817Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="knn">
 <meta name="twitter:description" content="特征选择好的特征选择能够提升模型性能
@@ -103,13 +103,17 @@
 <li>去掉取值变化小的特征 Removing features with low variance</li>
 <li>单变量特征选择Univariate feature selection<br>  单变量特征选择能够对每一个特征进行测试，衡量该特征和响应变量之间的关系，根据得分舍去不好的特征。对于回归和分类问题可以采用卡方检验对特征进行测试。<ul>
 <li>Pearson相关系数Pearson Correlation<br>皮尔森相关系数是一种最简单的，能帮助理解特征和响应变量之间关系的方法，该方法衡量的是变量之间的线性相关性，结果的取值区间为[-1，1]，-1表示完全的负相关(这个变量下降，那个就会上升)，+1表示完全的正相关，0表示没有线性相关。Pearson相关系数的一个明显缺陷是，作为特征排序机制，他只对线性关系敏感。如果关系是非线性的，即便两个变量具有一一对应的关系，Pearson相关性也可能会接近0。</li>
-<li>互信息和最大信息系数 Mutual information and maximal information coefficient </li>
+<li>互信息和最大信息系数 Mutual information and maximal information coefficient</li>
 <li>距离相关系数（Distance correlation）</li>
 <li>基于学习模型的特征排序(Model based ranking)<br>这种方法的思路是直接使用你要用的机器学习算法，针对每个单独的特征和响应变量建立预测模型。其实Pearson相关系数等价于线性回归里的标准化回归系数。假如某个特征和响应变量之间的关系是非线性的，可以用基于树的方法（决策树、随机森林）、或者扩展的线性模型等。基于树的方法比较易于使用，因为他们对非线性关系的建模比较好，并且不需要太多的调试。但要注意过拟合问题，因此树的深度最好不要太大，再就是运用交叉验证。</li>
 </ul>
 </li>
 <li>线性模型与正则化<br>###　k-近邻分类器</li>
 </ul>
+<p>给一个训练数据集和一个新的实例，在训练数据集中找出与这个新实例最近的k个训练实例，然后统计最近的k个训练实例中所属类别计数最多的那个类，就是新实例的类</p>
+<p>三要素:<br>1.k值的选择<br>2.距离的度量(欧式距离,马氏距离等)<br>3.分类决策规则(多数表决规则)</p>
+<p>k值的选择:<br>1.k值越小表明模型越复杂,更加容易过拟合<br>2.但是k值过大,模型越简单,若k=n,意味着什么点都是训练集中类别最多的那个类</p>
+<p>一般k会取一个较小的值,然后使用过交叉验证来确定</p>
 <p>k-近邻分类算法<br>    1．设置参数k,输入待识别样本x;</p>
 <pre><code>2. 计算x与每个训练样本的距离
 3. 选取距离最小的前k个样本，统计其中包含各个类别的样本数k
@@ -119,7 +123,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/17/knn/" data-id="cix8njgen00051jjiafv7h4uk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/12/17/knn/" data-id="cixsx587a0008g5jiuret937b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
@@ -187,7 +191,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li></ul>
     </div>
   </div>
 
@@ -200,23 +204,23 @@
       <ul>
         
           <li>
-            <a href="/2016/12/22/tackbp/">tackbp2014</a>
+            <a href="/2017/01/10/pythonnote/">pythonnote</a>
           </li>
         
           <li>
-            <a href="/2016/12/17/knn/">knn</a>
+            <a href="/2017/01/06/gbdt/">gbdt</a>
           </li>
         
           <li>
-            <a href="/2016/12/17/贝叶斯定理/">模式识别课件</a>
+            <a href="/2017/01/05/vsm/">vsm</a>
           </li>
         
           <li>
-            <a href="/2016/12/15/ufldl-softmax/">ufldl_softmax</a>
+            <a href="/2017/01/05/mlcourse-3/">mlcourse-3</a>
           </li>
         
           <li>
-            <a href="/2016/12/14/encoding/">数据预处理:one-hot encoding</a>
+            <a href="/2016/12/29/crf/">crf</a>
           </li>
         
       </ul>
@@ -231,7 +235,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2016 Zheng GuiDong<br>
+      &copy; 2017 Zheng GuiDong<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

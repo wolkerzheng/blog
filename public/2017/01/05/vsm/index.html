@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>vsm | 郑桂东的学习地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="vsmVSM(Vector Space Model):把文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度表达语义的相似度,直观易懂.当文档被表示为文档空间的向量,就可以通过计算向量之间的相似度来度量文档间的相似性.文本处理中最常用的相似度量方法是余弦距离M个无序特征项ti，词根/词/短语/其他每个文档dj可以用特征项向量来表示（a1j,a2j，…，aMj）权重计算，N个训练文档AM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vsm">
+<meta property="og:url" content="http://yoursite.com/2017/01/05/vsm/index.html">
+<meta property="og:site_name" content="郑桂东的学习地">
+<meta property="og:description" content="vsmVSM(Vector Space Model):把文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度表达语义的相似度,直观易懂.当文档被表示为文档空间的向量,就可以通过计算向量之间的相似度来度量文档间的相似性.文本处理中最常用的相似度量方法是余弦距离M个无序特征项ti，词根/词/短语/其他每个文档dj可以用特征项向量来表示（a1j,a2j，…，aMj）权重计算，N个训练文档AM">
+<meta property="og:updated_time" content="2017-01-10T08:55:15.723Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vsm">
+<meta name="twitter:description" content="vsmVSM(Vector Space Model):把文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度表达语义的相似度,直观易懂.当文档被表示为文档空间的向量,就可以通过计算向量之间的相似度来度量文档间的相似性.文本处理中最常用的相似度量方法是余弦距离M个无序特征项ti，词根/词/短语/其他每个文档dj可以用特征项向量来表示（a1j,a2j，…，aMj）权重计算，N个训练文档AM">
+  
+    <link rel="alternate" href="/atom.xml" title="郑桂东的学习地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">郑桂东的学习地</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-vsm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/05/vsm/" class="article-date">
+  <time datetime="2017-01-05T12:59:57.000Z" itemprop="datePublished">2017-01-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vsm
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="vsm"><a href="#vsm" class="headerlink" title="vsm"></a>vsm</h3><p>VSM(Vector Space Model):<br>把文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度表达语义的相似度,直观易懂.当文档被表示为文档空间的向量,就可以通过计算向量之间的相似度来度量文档间的相似性.文本处理中最常用的相似度量方法是余弦距离<br>M个无序特征项ti，词根/词/短语/其他每个文档dj可以用特征项向量来表示（a1j,a2j，…，aMj）权重计算，N个训练文档AM*N= (aij) 文档相似度比较1）Cosine计算，余弦计算的好处是，正好是一个介于0到1的数，如果向量一致就是1，如果正交就是0，符合相似度百分比的特性,余弦的计算方法为，向量内积/各个向量的模的乘积.2）内积计算，直接计算内积，计算强度低，但是误差大。<br>向量空间模型 （或词组向量模型) 是一个应用于信息过滤，信息撷取，索引 以及评估相关性的代数模型。SMART是首个使用这个模型的信息检索系统。<br>文件（语料）被视为索引词（关键词）形成的多次元向量空间， 索引词的集合通常为文件中至少出现过一次的词组。<br>搜寻时，输入的检索词也被转换成类似于文件的向量，这个模型假设，文件和搜寻词的相关程度，可以经由比较每个文件(向量）和检索词（向量）的夹角偏差程度而得知。<br>实际上，计算夹角向量之间的余弦比直接计算夹角容易：<br>余弦为零表示检索词向量垂直于文件向量，即没有符合，也就是说该文件不含此检索词。<br>通过上述的向量空间模型，文本数据就转换成了计算机可以处理的结构化数据，两个文档之间的相似性问题转变成了两个向量之间的相似性问题。</p>
+<p>向量空间模型的关键在于特征向量的选取和特征向量的权值计算两个部分.</p>
+<p>1．文档向量的构造<br>　　对于任一文档d_j ∈ D，我们可以把它表示为如下t维向量的形式：</p>
+<p>\overline{d}<em>j =(w</em>{1j},w<em>{2j},\cdots,w</em>{tj})<br>  向量分量wtj代表第i个标引词ki在文档dj中所具有的权重，t为系统中标引词的总数。在布尔模型中，wtj的取值范围是{0，1}；在向量空间模型中，由于采用“部分匹配”策略，wtj的取值范围是一个连续的实数区间[0，1]。</p>
+<h3 id="TF-IDF"><a href="#TF-IDF" class="headerlink" title="TF-IDF"></a>TF-IDF</h3><p>TF-IDF（term frequency–inverse document frequency）是一种用于信息检索与数据挖掘的常用加权技术。<br>    词频(TF) = 某个词在文章中的出现次数<br>标准化:<br>    词频(TF) = 某个词在文章中的出现次数/文章的总词数<br>计算逆文档频率:<br>    逆文档频率(IDF) = log(语料库的文档总数/包含该词的文档数+1)<br>如果一个词越常见，那么分母就越大，逆文档频率就越小越接近0。分母加1，是为了避免分母为0（即所有文档都不包含该词）。log表示对得到的值取对数。<br>    TF-IDF = 词频(TF) * 逆文档频率(IDF)<br>所以,TF-IDF与一个词在文档中的出现次数成正比,与该词在整个语言中的出现次数成反比.<br>TF-IDF权重计算方法经常会和余弦相似度(cosine similarity)一同使用於向量空间模型中，用以判断两份文件之间的相似性。<br>找出相似文章:<br>    （1）使用TF-IDF算法，找出两篇文章的关键词；<br>　　（2）每篇文章各取出若干个关键词（比如20个），合并成一个集合，计算每篇文章对于这个集合中的词的词频（为了避免文章长度的差异，可以使用相对词频）；<br>　　（3）生成两篇文章各自的词频向量；<br>　　（4）计算两个向量的余弦相似度，值越大就表示越相似。</p>
+<h3 id="词袋模型-BoW"><a href="#词袋模型-BoW" class="headerlink" title="词袋模型(BoW)"></a>词袋模型(BoW)</h3><p>该模型忽略掉文本的语法和语序等要素，将其仅仅看作是若干个词汇的集合，文档中每个单词的出现都是独立的。BoW使用一组无序的单词(words)来表达一段文字或一个文档.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/01/05/vsm/" data-id="cixsx587r000lg5jir5t7udjn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/01/06/gbdt/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          gbdt
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/01/05/mlcourse-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">mlcourse-3</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/dl/">dl</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂/">杂</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn/">learn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/read/">read</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/learn/" style="font-size: 10px;">learn</a> <a href="/tags/note/" style="font-size: 10px;">note</a> <a href="/tags/read/" style="font-size: 15px;">read</a> <a href="/tags/读书笔记/" style="font-size: 20px;">读书笔记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/01/10/pythonnote/">pythonnote</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/06/gbdt/">gbdt</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/05/vsm/">vsm</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/05/mlcourse-3/">mlcourse-3</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/29/crf/">crf</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Zheng GuiDong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
