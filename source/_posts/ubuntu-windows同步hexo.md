@@ -9,10 +9,10 @@ categories: 杂
 ## windows上
 使用git
 在hexo初始化所在的博客文件夹下初始化仓库：
-	`git init` 
+	`git init`
 然后在github上new 一个 repositories,假设它的地址为:git@github.com:user/blog.git,输入
 	`git remote add origin git@github.com:user/blog.git`
-
+<!--more-->
 添加本地所有文件到仓库,并添加更新说明：
 	`git add .`
 	`git commit -m 'commit'`

@@ -6,21 +6,22 @@
   <title>ufldl_softmax | 郑桂东的学习地</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="softmaxhttp://ufldl.stanford.edu/wiki/index.php/Softmax%E5%9B%9E%E5%BD%92
-softmax回归模型是logistic回归模型在多分类问题上的推广，在多分类问题种，类标签y可以取两个以上的值。softmax回归模型对于诸如mnist手写数字分类10个不同的单个数字问题是很有用的。softmax回归是有监督的。
-在logistic">
+softmax回归模型是logistic回归模型在多分类问题上的推广，在多分类问题种，类标签y可以取两个以上的值。softmax回归模型对于诸如mnist手写数字分类10个不同的单个数字问题是很有用的。softmax回归是有监督的。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ufldl_softmax">
 <meta property="og:url" content="http://yoursite.com/2016/12/15/ufldl-softmax/index.html">
 <meta property="og:site_name" content="郑桂东的学习地">
 <meta property="og:description" content="softmaxhttp://ufldl.stanford.edu/wiki/index.php/Softmax%E5%9B%9E%E5%BD%92
-softmax回归模型是logistic回归模型在多分类问题上的推广，在多分类问题种，类标签y可以取两个以上的值。softmax回归模型对于诸如mnist手写数字分类10个不同的单个数字问题是很有用的。softmax回归是有监督的。
-在logistic">
-<meta property="og:updated_time" content="2016-12-15T12:04:48.704Z">
+softmax回归模型是logistic回归模型在多分类问题上的推广，在多分类问题种，类标签y可以取两个以上的值。softmax回归模型对于诸如mnist手写数字分类10个不同的单个数字问题是很有用的。softmax回归是有监督的。">
+<meta property="og:image" content="http://yoursite.com/img/blog_softmax_1.png">
+<meta property="og:image" content="http://yoursite.com/img/blog_softmax_2.png">
+<meta property="og:image" content="http://yoursite.com/img/blog_softmax_3.png">
+<meta property="og:updated_time" content="2017-03-20T15:33:01.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ufldl_softmax">
 <meta name="twitter:description" content="softmaxhttp://ufldl.stanford.edu/wiki/index.php/Softmax%E5%9B%9E%E5%BD%92
-softmax回归模型是logistic回归模型在多分类问题上的推广，在多分类问题种，类标签y可以取两个以上的值。softmax回归模型对于诸如mnist手写数字分类10个不同的单个数字问题是很有用的。softmax回归是有监督的。
-在logistic">
+softmax回归模型是logistic回归模型在多分类问题上的推广，在多分类问题种，类标签y可以取两个以上的值。softmax回归模型对于诸如mnist手写数字分类10个不同的单个数字问题是很有用的。softmax回归是有监督的。">
+<meta name="twitter:image" content="http://yoursite.com/img/blog_softmax_1.png">
   
     <link rel="alternate" href="/atom.xml" title="郑桂东的学习地" type="application/atom+xml">
   
@@ -58,9 +59,9 @@ softmax回归模型是logistic回归模型在多分类问题上的推广，在�
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -96,14 +97,13 @@ softmax回归模型是logistic回归模型在多分类问题上的推广，在�
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="softmax"><a href="#softmax" class="headerlink" title="softmax"></a>softmax</h3><p><a href="http://ufldl.stanford.edu/wiki/index.php/Softmax%E5%9B%9E%E5%BD%92" target="_blank" rel="external">http://ufldl.stanford.edu/wiki/index.php/Softmax%E5%9B%9E%E5%BD%92</a></p>
-<p>softmax回归模型是logistic回归模型在多分类问题上的推广，在多分类问题种，类标签y可以取两个以上的值。softmax回归模型对于诸如mnist手写数字分类10个不同的单个数字问题是很有用的。softmax回归是有监督的。</p>
-<p>在logistic回归中，有m个已标记的训练集{（x(1),y(1)）,…,(x(m),y(m))}，logistic回归是针对二分类问题的，类标记y(i)属于{0,1}。假设函数(hypothesis function）可以表示为：<br>    ！<a href="/img/blog_softmax_1.png">1</a><br>将训练模型参数θ，使其能够最小化代价函数：<br>    ！<a href="/img/blog_softmax_2.png">2</a></p>
-<p>在多分类中，对于给定的测试输入x,用假设函数针对每一个类别j估算出概率值p(y=j|x).<br>假设函数要输出一个k维的向量（向量元素的和为1）来表示这k个估计的概率值。假设函数hθ（x）形式如下:<br>    ！<a href="/img/blog_softmax_3.png">3</a><br>θ1,θ2,…θk是模型参数。</p>
+<p>softmax回归模型是logistic回归模型在多分类问题上的推广，在多分类问题种，类标签y可以取两个以上的值。softmax回归模型对于诸如mnist手写数字分类10个不同的单个数字问题是很有用的。softmax回归是有监督的。<br><a id="more"></a><br>在logistic回归中，有m个已标记的训练集{（x(1),y(1)）,…,(x(m),y(m))}，logistic回归是针对二分类问题的，类标记y(i)属于{0,1}。假设函数(hypothesis function）可以表示为：<br><img src="/img/blog_softmax_1.png" alt=""><br>将训练模型参数θ，使其能够最小化代价函数：<br><img src="/img/blog_softmax_2.png" alt=""></p>
+<p>在多分类中，对于给定的测试输入x,用假设函数针对每一个类别j估算出概率值p(y=j|x).<br>假设函数要输出一个k维的向量（向量元素的和为1）来表示这k个估计的概率值。假设函数hθ（x）形式如下:<br><img src="/img/blog_softmax_3.png" alt=""><br>θ1,θ2,…θk是模型参数。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/15/ufldl-softmax/" data-id="cixycdgag000j7kjijtbea9q3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/12/15/ufldl-softmax/" data-id="cj45iw70n001y28jio64bv3rk" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/read/">read</a></li></ul>
@@ -115,7 +115,7 @@ softmax回归模型是logistic回归模型在多分类问题上的推广，在�
 <nav id="article-nav">
   
     <a href="/2016/12/17/贝叶斯定理/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
           模式识别课件
@@ -125,7 +125,7 @@ softmax回归模型是logistic回归模型在多分类问题上的推广，在�
   
   
     <a href="/2016/12/14/encoding/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">数据预处理:one-hot encoding</div>
     </a>
   
@@ -140,7 +140,7 @@ softmax回归模型是logistic回归模型在多分类问题上的推广，在�
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/dl/">dl</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂/">杂</a></li></ul>
     </div>
@@ -150,9 +150,9 @@ softmax回归模型是logistic回归模型在多分类问题上的推广，在�
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn/">learn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/read/">read</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deeplearning/">deeplearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn/">learn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/read/">read</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tensorflow-note/">tensorflow_note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自然语言处理/">自然语言处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
     </div>
   </div>
 
@@ -160,9 +160,9 @@ softmax回归模型是logistic回归模型在多分类问题上的推广，在�
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/tags/learn/" style="font-size: 10px;">learn</a> <a href="/tags/note/" style="font-size: 10px;">note</a> <a href="/tags/read/" style="font-size: 15px;">read</a> <a href="/tags/读书笔记/" style="font-size: 20px;">读书笔记</a>
+      <a href="/tags/deep-learning/" style="font-size: 16.67px;">deep learning</a> <a href="/tags/deeplearning/" style="font-size: 10px;">deeplearning</a> <a href="/tags/learn/" style="font-size: 10px;">learn</a> <a href="/tags/note/" style="font-size: 11.67px;">note</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/read/" style="font-size: 10px;">read</a> <a href="/tags/tensorflow-note/" style="font-size: 15px;">tensorflow_note</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a> <a href="/tags/自然语言处理/" style="font-size: 18.33px;">自然语言处理</a> <a href="/tags/读书笔记/" style="font-size: 11.67px;">读书笔记</a>
     </div>
   </div>
 
@@ -171,7 +171,7 @@ softmax回归模型是logistic回归模型在多分类问题上的推广，在�
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li></ul>
     </div>
   </div>
 
@@ -179,28 +179,28 @@ softmax回归模型是logistic回归模型在多分类问题上的推广，在�
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/01/10/pythonnote/">pythonnote</a>
+            <a href="/2017/05/20/end2end-relation-extractio-lstm/">End-to-End Relation Extraction using LSTMs on Sequences and Tree Structures</a>
           </li>
         
           <li>
-            <a href="/2017/01/06/gbdt/">gbdt</a>
+            <a href="/2017/05/07/篇章结构/">词法、句法、语法</a>
           </li>
         
           <li>
-            <a href="/2017/01/05/vsm/">vsm</a>
+            <a href="/2017/04/30/句子相似度计算/">句子相似度计算</a>
           </li>
         
           <li>
-            <a href="/2017/01/05/mlcourse-3/">mlcourse-3</a>
+            <a href="/2017/04/19/memory-networks/">memory networks</a>
           </li>
         
           <li>
-            <a href="/2016/12/29/crf/">crf</a>
+            <a href="/2017/04/18/keras-note/">keras_note</a>
           </li>
         
       </ul>
@@ -216,7 +216,7 @@ softmax回归模型是logistic回归模型在多分类问题上的推广，在�
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Zheng GuiDong<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

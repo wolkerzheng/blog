@@ -6,16 +6,16 @@ tags: note
 
 ### tackbp
 NIST TAC-KBP2014的实体链接（EL）任务旨在从文本文档的源集合中提取命名实体，并将它们链接到现有知识库（KB）。 还需要EL系统来集群那些没有相应的KB条目的NIL实体。 今年的任务包括以下几个方面：单语英语EL（英语文本到英语KB），跨语言汉语到英语EL（中文到英语KB）和跨语言西班牙语到英语（西班牙语文本 到英语KB）。
-
+<!--more-->
 ### conll-yago2003
 CoNLL-2003共享任务数据文件包含由单个空格分隔的四列。 每个词都放在一个单独的行上，每个句子后面有一个空行。 每行上的第一个项目是一个单词，第二个是词性（POS）标记，第三个是句法块标记，第四个是命名实体标记。 块标记和命名实体标记具有I-TYPE的格式，这意味着该单词在TYPE类型的短语内。 只有两个相同类型的短语紧跟在一起，第二个短语的第一个单词将具有标签B-TYPE，以表明它开始一个新的短语。 带标签O的字词不是短语的一部分。 这里是一个例子：
-   U.N.         NNP  I-NP  I-ORG 
-   official     NN   I-NP  O 
-   Ekeus        NNP  I-NP  I-PER 
-   heads        VBZ  I-VP  O 
-   for          IN   I-PP  O 
-   Baghdad      NNP  I-NP  I-LOC 
-   .            .    O     O 
+   U.N.         NNP  I-NP  I-ORG
+   official     NN   I-NP  O
+   Ekeus        NNP  I-NP  I-PER
+   heads        VBZ  I-VP  O
+   for          IN   I-PP  O
+   Baghdad      NNP  I-NP  I-LOC
+   .            .    O     O
 
 数据由每种语言的三个文件组成：一个训练文件和两个测试文件testa和testb。 第一个测试文件将在开发阶段用于为学习系统找到良好的参数。 第二个测试文件将用于最终评估。 有数据文件可用于英语和德语。 德语文件包含一个额外的列（第二个），它保存每个单词的引理。
 

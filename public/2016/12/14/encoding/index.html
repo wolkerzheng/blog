@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/12/14/encoding/index.html">
 <meta property="og:site_name" content="郑桂东的学习地">
 <meta property="og:description" content="One-Hot Encodingone-hot编码，又称为一位有效编码，对任意给定的状态，状态向量中只有一位为1，其余各位为0。主要是采用N位状态寄存器来对N个状态进行编码，每个状态都由他独立的寄存器位，并且在任意时候只有一位有效。这种状态机的速度与状态的数量无关，只取决于某特定状态的转移数量，速度很快。当状态机的状态增加时，如果使用二编码，那么速度会明显下降，但如果采用独热码，虽然多用了触发器，">
-<meta property="og:updated_time" content="2016-12-15T08:01:51.508Z">
+<meta property="og:updated_time" content="2017-04-24T08:45:36.269Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据预处理:one-hot encoding">
 <meta name="twitter:description" content="One-Hot Encodingone-hot编码，又称为一位有效编码，对任意给定的状态，状态向量中只有一位为1，其余各位为0。主要是采用N位状态寄存器来对N个状态进行编码，每个状态都由他独立的寄存器位，并且在任意时候只有一位有效。这种状态机的速度与状态的数量无关，只取决于某特定状态的转移数量，速度很快。当状态机的状态增加时，如果使用二编码，那么速度会明显下降，但如果采用独热码，虽然多用了触发器，">
@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -89,8 +89,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="One-Hot-Encoding"><a href="#One-Hot-Encoding" class="headerlink" title="One-Hot Encoding"></a>One-Hot Encoding</h3><p>one-hot编码，又称为一位有效编码，对任意给定的状态，状态向量中只有一位为1，其余各位为0。主要是采用N位状态寄存器来对N个状态进行编码，每个状态都由他独立的寄存器位，并且在任意时候只有一位有效。这种状态机的速度与状态的数量无关，只取决于某特定状态的转移数量，速度很快。当状态机的状态增加时，如果使用二编码，那么速度会明显下降，但如果采用独热码，虽然多用了触发器，但由于状态译码简单，节省和简化了组合逻辑电路。<br>一个四种状态：A，B，C，D<br>独热编码就为：0001,0010,0100,1000</p>
-<p>在实际的机器学习的应用任务中，特征有时候并不总是连续值，有可能是一些分类值，如性别可分为“male”和“female”。在机器学习任务中，对于这样的特征，通常需要对其进行特征数字化，如有如下三个特征属性：</p>
+        <h3 id="One-Hot-Encoding"><a href="#One-Hot-Encoding" class="headerlink" title="One-Hot Encoding"></a>One-Hot Encoding</h3><p>one-hot编码，又称为一位有效编码，对任意给定的状态，状态向量中只有一位为1，其余各位为0。主要是采用N位状态寄存器来对N个状态进行编码，每个状态都由他独立的寄存器位，并且在任意时候只有一位有效。这种状态机的速度与状态的数量无关，只取决于某特定状态的转移数量，速度很快。当状态机的状态增加时，如果使用二编码，那么速度会明显下降，但如果采用独热码，虽然多用了触发器，但由于状态译码简单，节省和简化了组合逻辑电路。<br>一个四种状态：A，B，C，D<br>独热编码就为：0001,0010,0100,1000<br><a id="more"></a><br>在实际的机器学习的应用任务中，特征有时候并不总是连续值，有可能是一些分类值，如性别可分为“male”和“female”。在机器学习任务中，对于这样的特征，通常需要对其进行特征数字化，如有如下三个特征属性：</p>
 <pre><code>* 性别：[&quot;male&quot;，&quot;female&quot;]
  * 地区：[&quot;Europe&quot;，&quot;US&quot;，&quot;Asia&quot;]
 * 浏览器：[&quot;Firefox&quot;，&quot;Chrome&quot;，&quot;Safari&quot;，&quot;Internet Explorer&quot;]
@@ -99,16 +98,16 @@
 enc = preprocessing.OneHotEncoder()
 enc.fit([[0,0,3],[1,1,0],[0,2,1],[1,0,2]])
 array = enc.transform([[0,1,3]]).toarray()
-print array 
+print array
 </code></pre><p>结果：[[ 1.  0.  0.  1.  0.  0.  0.  0.  1.]]</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/14/encoding/" data-id="cixycdg9q00027kjinv6sy8n0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/12/14/encoding/" data-id="cj45iw6yw000528jicbxx07ya" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/read/">read</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deep-learning/">deep learning</a></li></ul>
 
     </footer>
   </div>
@@ -117,7 +116,7 @@ print array
 <nav id="article-nav">
   
     <a href="/2016/12/15/ufldl-softmax/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
           ufldl_softmax
@@ -127,7 +126,7 @@ print array
   
   
     <a href="/2016/12/13/ubuntu-windows同步hexo/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">ubuntu&amp;windows同步hexo</div>
     </a>
   
@@ -142,7 +141,7 @@ print array
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/dl/">dl</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂/">杂</a></li></ul>
     </div>
@@ -152,9 +151,9 @@ print array
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn/">learn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/read/">read</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deeplearning/">deeplearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn/">learn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/read/">read</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tensorflow-note/">tensorflow_note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自然语言处理/">自然语言处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
     </div>
   </div>
 
@@ -162,9 +161,9 @@ print array
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/tags/learn/" style="font-size: 10px;">learn</a> <a href="/tags/note/" style="font-size: 10px;">note</a> <a href="/tags/read/" style="font-size: 15px;">read</a> <a href="/tags/读书笔记/" style="font-size: 20px;">读书笔记</a>
+      <a href="/tags/deep-learning/" style="font-size: 16.67px;">deep learning</a> <a href="/tags/deeplearning/" style="font-size: 10px;">deeplearning</a> <a href="/tags/learn/" style="font-size: 10px;">learn</a> <a href="/tags/note/" style="font-size: 11.67px;">note</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/read/" style="font-size: 10px;">read</a> <a href="/tags/tensorflow-note/" style="font-size: 15px;">tensorflow_note</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a> <a href="/tags/自然语言处理/" style="font-size: 18.33px;">自然语言处理</a> <a href="/tags/读书笔记/" style="font-size: 11.67px;">读书笔记</a>
     </div>
   </div>
 
@@ -173,7 +172,7 @@ print array
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li></ul>
     </div>
   </div>
 
@@ -181,28 +180,28 @@ print array
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/01/10/pythonnote/">pythonnote</a>
+            <a href="/2017/05/20/end2end-relation-extractio-lstm/">End-to-End Relation Extraction using LSTMs on Sequences and Tree Structures</a>
           </li>
         
           <li>
-            <a href="/2017/01/06/gbdt/">gbdt</a>
+            <a href="/2017/05/07/篇章结构/">词法、句法、语法</a>
           </li>
         
           <li>
-            <a href="/2017/01/05/vsm/">vsm</a>
+            <a href="/2017/04/30/句子相似度计算/">句子相似度计算</a>
           </li>
         
           <li>
-            <a href="/2017/01/05/mlcourse-3/">mlcourse-3</a>
+            <a href="/2017/04/19/memory-networks/">memory networks</a>
           </li>
         
           <li>
-            <a href="/2016/12/29/crf/">crf</a>
+            <a href="/2017/04/18/keras-note/">keras_note</a>
           </li>
         
       </ul>
@@ -218,7 +217,7 @@ print array
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Zheng GuiDong<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

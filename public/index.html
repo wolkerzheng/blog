@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -61,10 +61,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-pythonnote" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-end2end-relation-extractio-lstm" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/01/10/pythonnote/" class="article-date">
-  <time datetime="2017-01-10T03:03:22.000Z" itemprop="datePublished">2017-01-10</time>
+    <a href="/2017/05/20/end2end-relation-extractio-lstm/" class="article-date">
+  <time datetime="2017-05-20T12:23:20.000Z" itemprop="datePublished">2017-05-20</time>
 </a>
     
   </div>
@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/10/pythonnote/">pythonnote</a>
+      <a class="article-title" href="/2017/05/20/end2end-relation-extractio-lstm/">End-to-End Relation Extraction using LSTMs on Sequences and Tree Structures</a>
     </h1>
   
 
@@ -83,240 +83,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="panda"><a href="#panda" class="headerlink" title="panda"></a>panda</h3>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/10/pythonnote/" data-id="cixycdgaa000d7kji75r4tgln" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-gbdt" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/06/gbdt/" class="article-date">
-  <time datetime="2017-01-06T09:25:04.000Z" itemprop="datePublished">2017-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+        <h2 id="End-to-End-Relation-Extraction-using-LSTMs-on-Sequences-and-Tree-Structures"><a href="#End-to-End-Relation-Extraction-using-LSTMs-on-Sequences-and-Tree-Structures" class="headerlink" title="End-to-End Relation Extraction using LSTMs on Sequences and Tree Structures"></a>End-to-End Relation Extraction using LSTMs on Sequences and Tree Structures</h2><p>文章来自ACL2016</p>
+<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>文章提出了一中端到端模型来抽取实体以及它们间的关系。模型通过双向序列（从左到右和从右到左）和双向树结构（自底而上和自上而下）的LSTM-RNN实现对单个模型中的实体和关系的联合建模。<br>模型首先识别实体，然后使用单个递增解码的NN结构提取检测到的实体之间的关系，并使用实体和关系标签共同更新NN参数。<br>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/06/gbdt/">gbdt</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Boosting"><a href="#Boosting" class="headerlink" title="Boosting"></a>Boosting</h2><p>Boosting是彝族可将弱学习器提升为强学习器的算法.这族算法的工作机制类似:先从初始训练集训练出一个基学习器,在根据学习器的表现对训练样本分布进行调整,使得先前基学习器做错的训练样本在后续受到更多关注,然后基于调整后的样本分布来训练下一个基学习器;如此重复进行,直至基学习器数目达到事先指定的值T,最终将这T个基学习器进行权结合.</p>
-<h2 id="GBDT"><a href="#GBDT" class="headerlink" title="GBDT"></a>GBDT</h2><p>GBDT(Gradient Boosting Decision Tree)是一种迭代的决策树算法,该算法由多棵决策树组成,通过所有树进行投票来进行分类.这是一种泛化能力(generalization)比较强的算法.</p>
-<p>GBDT是一个加性回归模型,通过boosting迭代的构造一组弱学习器,相对LR的优势,如不需要做特征的归一化,自动进行特征选择,模型可解释性比较好,可以适应多种损失函数如,Squareloss,LogLoss等.每一次建立模型是在之前建立模型的损失函数的梯度下降方向<br>GBDT的核心在于,每一棵树学的是之前所有树结论和的残差,残差为与预测值的差值.</p>
-<h2 id="随机森林-Random-Forest"><a href="#随机森林-Random-Forest" class="headerlink" title="随机森林(Random Forest)"></a>随机森林(Random Forest)</h2><p>随机森林是Bagging的一个扩展变体.RF在以决策树为基学习器构建Bagging集成 的基础上,进一步在决策树的训练过程中引入了随机属性选择.传统决策树在选择划分属性时是在当前结点的属性集合(假定有d个属性)中选择一个最优属性;而在随机森林中,对基决策树的每个结点,先从该结点的属性集合中随机选择一个包含k个属性的子集,然后再从这个子集中选择一个最优属性用户划分.一个情况下,k=log2d</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/06/gbdt/" data-id="cixycdg9s00037kjib6f6phbr" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-vsm" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/05/vsm/" class="article-date">
-  <time datetime="2017-01-05T12:59:57.000Z" itemprop="datePublished">2017-01-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          <p class="article-more-link">
+            <a href="/2017/05/20/end2end-relation-extractio-lstm/#more">Read More</a>
+          </p>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/05/vsm/">vsm</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="vsm"><a href="#vsm" class="headerlink" title="vsm"></a>vsm</h3><p>VSM(Vector Space Model):<br>把文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度表达语义的相似度,直观易懂.当文档被表示为文档空间的向量,就可以通过计算向量之间的相似度来度量文档间的相似性.文本处理中最常用的相似度量方法是余弦距离<br>M个无序特征项ti，词根/词/短语/其他每个文档dj可以用特征项向量来表示（a1j,a2j，…，aMj）权重计算，N个训练文档AM*N= (aij) 文档相似度比较1）Cosine计算，余弦计算的好处是，正好是一个介于0到1的数，如果向量一致就是1，如果正交就是0，符合相似度百分比的特性,余弦的计算方法为，向量内积/各个向量的模的乘积.2）内积计算，直接计算内积，计算强度低，但是误差大。<br>向量空间模型 （或词组向量模型) 是一个应用于信息过滤，信息撷取，索引 以及评估相关性的代数模型。SMART是首个使用这个模型的信息检索系统。<br>文件（语料）被视为索引词（关键词）形成的多次元向量空间， 索引词的集合通常为文件中至少出现过一次的词组。<br>搜寻时，输入的检索词也被转换成类似于文件的向量，这个模型假设，文件和搜寻词的相关程度，可以经由比较每个文件(向量）和检索词（向量）的夹角偏差程度而得知。<br>实际上，计算夹角向量之间的余弦比直接计算夹角容易：<br>余弦为零表示检索词向量垂直于文件向量，即没有符合，也就是说该文件不含此检索词。<br>通过上述的向量空间模型，文本数据就转换成了计算机可以处理的结构化数据，两个文档之间的相似性问题转变成了两个向量之间的相似性问题。</p>
-<p>向量空间模型的关键在于特征向量的选取和特征向量的权值计算两个部分.</p>
-<p>1．文档向量的构造<br>　　对于任一文档d_j ∈ D，我们可以把它表示为如下t维向量的形式：</p>
-<p>\overline{d}<em>j =(w</em>{1j},w<em>{2j},\cdots,w</em>{tj})<br>  向量分量wtj代表第i个标引词ki在文档dj中所具有的权重，t为系统中标引词的总数。在布尔模型中，wtj的取值范围是{0，1}；在向量空间模型中，由于采用“部分匹配”策略，wtj的取值范围是一个连续的实数区间[0，1]。</p>
-<h3 id="TF-IDF"><a href="#TF-IDF" class="headerlink" title="TF-IDF"></a>TF-IDF</h3><p>TF-IDF（term frequency–inverse document frequency）是一种用于信息检索与数据挖掘的常用加权技术。<br>    词频(TF) = 某个词在文章中的出现次数<br>标准化:<br>    词频(TF) = 某个词在文章中的出现次数/文章的总词数<br>计算逆文档频率:<br>    逆文档频率(IDF) = log(语料库的文档总数/包含该词的文档数+1)<br>如果一个词越常见，那么分母就越大，逆文档频率就越小越接近0。分母加1，是为了避免分母为0（即所有文档都不包含该词）。log表示对得到的值取对数。<br>    TF-IDF = 词频(TF) * 逆文档频率(IDF)<br>所以,TF-IDF与一个词在文档中的出现次数成正比,与该词在整个语言中的出现次数成反比.<br>TF-IDF权重计算方法经常会和余弦相似度(cosine similarity)一同使用於向量空间模型中，用以判断两份文件之间的相似性。<br>找出相似文章:<br>    （1）使用TF-IDF算法，找出两篇文章的关键词；<br>　　（2）每篇文章各取出若干个关键词（比如20个），合并成一个集合，计算每篇文章对于这个集合中的词的词频（为了避免文章长度的差异，可以使用相对词频）；<br>　　（3）生成两篇文章各自的词频向量；<br>　　（4）计算两个向量的余弦相似度，值越大就表示越相似。</p>
-<h3 id="词袋模型-BoW"><a href="#词袋模型-BoW" class="headerlink" title="词袋模型(BoW)"></a>词袋模型(BoW)</h3><p>该模型忽略掉文本的语法和语序等要素，将其仅仅看作是若干个词汇的集合，文档中每个单词的出现都是独立的。BoW使用一组无序的单词(words)来表达一段文字或一个文档.</p>
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/05/vsm/" data-id="cixycdgaj000l7kji5x540vpw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/20/end2end-relation-extractio-lstm/" data-id="cj45iw6z8000e28jiwik1aohc" class="article-share-link">Partager</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-mlcourse-3" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/05/mlcourse-3/" class="article-date">
-  <time datetime="2017-01-05T11:25:28.000Z" itemprop="datePublished">2017-01-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/05/mlcourse-3/">mlcourse-3</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h2><h3 id="信息增益"><a href="#信息增益" class="headerlink" title="信息增益"></a>信息增益</h3><pre><code>![enter description here][1]
-</code></pre><p>  其中,p,n是结点node德尔正\反例个数.A要扩展结点node的属性,Pi,Ni 是C被A划分成V个子集{C1,…,Cv}的正\反例个数.</p>
-<h3 id="决策树学习的常见问题"><a href="#决策树学习的常见问题" class="headerlink" title="决策树学习的常见问题"></a>决策树学习的常见问题</h3><ul>
-<li>不相关属性</li>
-<li>不充足属性<br>两类例子具有相同的属性值.没有任何属性可进一步扩展决策树.哪类例子多,叶节点标为哪类</li>
-<li>未知属性值<ul>
-<li>最通常值方法</li>
-<li>决策树方法:把未知属性作为”类”,原来的类作为”属性”</li>
-<li>bayesian方法</li>
-<li>按比例将未知属性值例子分配到各子集中:属性A由v个值{A1,….,Av},A值等于Ai的例子数Pi和ni,未知属性值例子数分别为Pu和Nu,在生成决策树时Ai的例子数Pi+pu·ratio   ni+nu·ratio</li>
-</ul>
-</li>
-</ul>
-<h2 id="规则学习算法"><a href="#规则学习算法" class="headerlink" title="规则学习算法"></a>规则学习算法</h2><p>一个例子e = <v1,...,vn> 满足选择子(公式,规则)的条件,也称作选择子(公式,规则)覆盖该例子.</v1,...,vn></p>
-<p>普化(generalize):减少规则的约束,使其覆盖更多的训练例子叫普化</p>
-<p>特化(specialize):增加规则的约束,使其覆盖训练例子较少叫特化</p>
-<p>一致:只覆盖正例不覆盖反例的规则被称为是一致的</p>
-<p>完备:覆盖所有正例的规则被称为完备的</p>
-<h2 id="gs算法"><a href="#gs算法" class="headerlink" title="gs算法"></a>gs算法</h2><p>GS算法<br>输入:例子集<br>输出:规则<br>原则:(a)从所有属性中选出覆盖正例最多的属性<br>        (b)在覆盖正例数相同的情况下,优先选择覆盖反例少的属性值</p>
-<p>设PE,NE是正例，反例的集合。 PE’,NE’是临时正，反例集。CPX表示公式，F表示规则（概念描述）。<br>(1) F←false;<br>(2) PE’ ←PE, NE’ ←NE, CPX←true;<br>(3) 按上述(a) (b)两原则选出一个属性值V 0 , 设V 0 为第j0个属性的取值，CPX←CPX∧ [Xj0=V0]<br>(4) PE’ ← CPX覆盖的正例，NE’ ← CPX覆盖的反例，如果NE’不为空，转(3);<br>            否则，继续执行(5);<br>(5) PE←PE\PE’, F ←F ∨CPX, 如果PE =∅   ,停止，否则转(2);</p>
-<h2 id="AQ算法"><a href="#AQ算法" class="headerlink" title="AQ算法"></a>AQ算法</h2><p>输入:例子集,参数#SQL,#CONS.Star的容量m,优化标准<br>输出:规则</p>
-<p>1) Pos和NEG分布代表正例和反例的集合<br>    ①从Pos中随机地选择一例子<br>    ② 生成例子e相对于反例集NEG的一个约束Star(reduced star),G(e|NEG,m) , 其中元素不多于m个。<br>    ③ 在得到的star中，根据设定的优化标准LEF找出一个最优的公式D。<br>    ④ 若公式D完全覆盖集合Pos,则转⑥<br>    ⑤ 否则，减少Pos的元素使其只包含不被D覆盖的例子。从步骤①开始重复整个过程。<br>    ⑥ 生成所有公式D的析取，它是一个完备且一致的概念描述。<br>2) Star生成: Induce方法<br>    ① 例子e的各个选择符被放入PS(partial star)中,将ps中的元素按照各种标准排序.<br>    ②在ps中保留最优的m个选择符.<br>    ③对ps中的选择符进行完备性和一致性检查,从ps中取出完备一致的描述放入SOLUTION表中,若SOLUTION表的大小大于等于参数#SOL,则转⑤.一致但不完备的描述从ps中取出放入表CONSISTENT中,若CONSISTENT表的大小大于等于参数#COS,则转⑤;<br>    ④对每个表达式进行特殊化处理,所有得到的表达式根据优化标准排列,仅保留m个最优的.重复步骤③, ④.<br>    ⑤得到的一般化描述按优先标准排序,保留m个最优的表达式构成约束Star(e|NEG,m).</p>
-<h3 id="扩张矩阵"><a href="#扩张矩阵" class="headerlink" title="扩张矩阵"></a>扩张矩阵</h3>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/05/mlcourse-3/" data-id="cixycdga8000b7kjibmclxxzv" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-crf" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/29/crf/" class="article-date">
-  <time datetime="2016-12-29T11:35:40.000Z" itemprop="datePublished">2016-12-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/29/crf/">crf</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>CRF(conditional random field) 条件随机场是在最大熵模型和隐马尔科夫模型的基础上提出的一种无向图学习模型,是一种用于标注和切分有序数据的条件概率模型.这时一种判别式无向图模型.</p>
-<p>产生式模型和判别式模型</p>
-<p>产生式模型(Generative):构建o和s的联合分布p(s,o),如HMM,BNs,MRF<br>产生式模型:样本→概率密度模型—产生模型→预测<br>判别式模型(Discriminative):构建o和s的条件分布p(s|o),如SVM,CRM,MEMM<br>判别式模型:样本→判别函数–预测模型→预测</p>
-<p>概率图模型:<br>这是一类用图的形式表示随机变量之间条件依赖关系的概率模型.是概率论与图论的结合.<br>G = (V,E)<br>V:顶点/结点,表示随机变量<br>E:边/弧,表示随机变量间的条件依赖关系</p>
-<p>有向图:也称贝叶斯网络(Bayesian Networks)或信念网络(Belief Networks,BN’s)</p>
-<p>无向图:也称马尔科夫随机场(Markov Random Fiels,MRF’s)或马尔科夫网络(Markov Networks)</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/29/crf/" data-id="cixycdg9i00007kji6s9fyc2d" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-tackbp" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/22/tackbp/" class="article-date">
-  <time datetime="2016-12-22T08:41:51.000Z" itemprop="datePublished">2016-12-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/22/tackbp/">tackbp2014</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="tackbp"><a href="#tackbp" class="headerlink" title="tackbp"></a>tackbp</h3><p>NIST TAC-KBP2014的实体链接（EL）任务旨在从文本文档的源集合中提取命名实体，并将它们链接到现有知识库（KB）。 还需要EL系统来集群那些没有相应的KB条目的NIL实体。 今年的任务包括以下几个方面：单语英语EL（英语文本到英语KB），跨语言汉语到英语EL（中文到英语KB）和跨语言西班牙语到英语（西班牙语文本 到英语KB）。</p>
-<h3 id="conll-yago2003"><a href="#conll-yago2003" class="headerlink" title="conll-yago2003"></a>conll-yago2003</h3><p>CoNLL-2003共享任务数据文件包含由单个空格分隔的四列。 每个词都放在一个单独的行上，每个句子后面有一个空行。 每行上的第一个项目是一个单词，第二个是词性（POS）标记，第三个是句法块标记，第四个是命名实体标记。 块标记和命名实体标记具有I-TYPE的格式，这意味着该单词在TYPE类型的短语内。 只有两个相同类型的短语紧跟在一起，第二个短语的第一个单词将具有标签B-TYPE，以表明它开始一个新的短语。 带标签O的字词不是短语的一部分。 这里是一个例子：<br>   U.N.         NNP  I-NP  I-ORG<br>   official     NN   I-NP  O<br>   Ekeus        NNP  I-NP  I-PER<br>   heads        VBZ  I-VP  O<br>   for          IN   I-PP  O<br>   Baghdad      NNP  I-NP  I-LOC<br>   .            .    O     O </p>
-<p>数据由每种语言的三个文件组成：一个训练文件和两个测试文件testa和testb。 第一个测试文件将在开发阶段用于为学习系统找到良好的参数。 第二个测试文件将用于最终评估。 有数据文件可用于英语和德语。 德语文件包含一个额外的列（第二个），它保存每个单词的引理。</p>
-<h3 id="aida-ee"><a href="#aida-ee" class="headerlink" title="aida-ee"></a>aida-ee</h3><p>AIDA-EE数据集包含300个文档，9,976个实体名称链接到维基百科（2010-08-17转储）。 文档本身取自GIGAWORD5 [1]数据集的APW部分，包含2010-10-01（开发数据）的150个文档和2010-11-01的150个文档（测试数据）。 由于许可问题，不提供文档内容，只提供实体注释的偏移量。</p>
-<p>数据格式</p>
-<p>数据集分为两个文件：apw_eng_201010.tsv和apw_eng_201011.tsv，对应于GIGAWORD5数据集中的（解压缩的）apw_eng_201010和apw_ang_201011文件。</p>
-<p>每个文件每行包含一个实体作为制表符分隔值，具有以下列含义：</p>
-<p>0：原始文件中的字符偏移量（\ n计数为字符） - 需要 - 将原始文件解压缩以使偏移有意义。<br>1：注释名称的完整字符串（由Stanford CoreNLP工具包自动识别，手动更正）<br>2：实体的YAGO2标识符或–OOKBE–（知识库实体，新兴实体）<br>3：维基百科URL（在2010-08-17转储）或–OOKBE–（知识库实体，新兴实体）<br>4：文档ID（仅供参考）</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/22/tackbp/" data-id="cixycdgac000f7kjirz35f8o3" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/note/">note</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deeplearning/">deeplearning</a></li></ul>
 
     </footer>
   </div>
@@ -325,10 +105,10 @@
 
 
   
-    <article id="post-knn" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-篇章结构" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/12/17/knn/" class="article-date">
-  <time datetime="2016-12-17T12:16:01.000Z" itemprop="datePublished">2016-12-17</time>
+    <a href="/2017/05/07/篇章结构/" class="article-date">
+  <time datetime="2017-05-07T06:48:47.000Z" itemprop="datePublished">2017-05-07</time>
 </a>
     
   </div>
@@ -339,7 +119,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/17/knn/">knn</a>
+      <a class="article-title" href="/2017/05/07/篇章结构/">词法、句法、语法</a>
     </h1>
   
 
@@ -347,36 +127,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="特征选择"><a href="#特征选择" class="headerlink" title="特征选择"></a>特征选择</h3><p>好的特征选择能够提升模型性能</p>
-<p>特征选择：<br>1.减少特征数量、降维，使模型泛化能力更强，减少过拟合<br>2.增强对特征和特征值之间的理解</p>
-<ul>
-<li>去掉取值变化小的特征 Removing features with low variance</li>
-<li>单变量特征选择Univariate feature selection<br>  单变量特征选择能够对每一个特征进行测试，衡量该特征和响应变量之间的关系，根据得分舍去不好的特征。对于回归和分类问题可以采用卡方检验对特征进行测试。<ul>
-<li>Pearson相关系数Pearson Correlation<br>皮尔森相关系数是一种最简单的，能帮助理解特征和响应变量之间关系的方法，该方法衡量的是变量之间的线性相关性，结果的取值区间为[-1，1]，-1表示完全的负相关(这个变量下降，那个就会上升)，+1表示完全的正相关，0表示没有线性相关。Pearson相关系数的一个明显缺陷是，作为特征排序机制，他只对线性关系敏感。如果关系是非线性的，即便两个变量具有一一对应的关系，Pearson相关性也可能会接近0。</li>
-<li>互信息和最大信息系数 Mutual information and maximal information coefficient</li>
-<li>距离相关系数（Distance correlation）</li>
-<li>基于学习模型的特征排序(Model based ranking)<br>这种方法的思路是直接使用你要用的机器学习算法，针对每个单独的特征和响应变量建立预测模型。其实Pearson相关系数等价于线性回归里的标准化回归系数。假如某个特征和响应变量之间的关系是非线性的，可以用基于树的方法（决策树、随机森林）、或者扩展的线性模型等。基于树的方法比较易于使用，因为他们对非线性关系的建模比较好，并且不需要太多的调试。但要注意过拟合问题，因此树的深度最好不要太大，再就是运用交叉验证。</li>
-</ul>
-</li>
-<li>线性模型与正则化<br>###　k-近邻分类器</li>
-</ul>
-<p>给一个训练数据集和一个新的实例，在训练数据集中找出与这个新实例最近的k个训练实例，然后统计最近的k个训练实例中所属类别计数最多的那个类，就是新实例的类</p>
-<p>三要素:<br>1.k值的选择<br>2.距离的度量(欧式距离,马氏距离等)<br>3.分类决策规则(多数表决规则)</p>
-<p>k值的选择:<br>1.k值越小表明模型越复杂,更加容易过拟合<br>2.但是k值过大,模型越简单,若k=n,意味着什么点都是训练集中类别最多的那个类</p>
-<p>一般k会取一个较小的值,然后使用过交叉验证来确定</p>
-<p>k-近邻分类算法<br>    1．设置参数k,输入待识别样本x;</p>
-<pre><code>2. 计算x与每个训练样本的距离
-3. 选取距离最小的前k个样本，统计其中包含各个类别的样本数k
-4.　class ←　argmax Ki
-</code></pre><p>(1)计算已知类别数据集中的点与当前点之间的距离<br>(2)按照距离递增次序排序<br>(3)选取与当前点距离最近的k个点<br>(4)确定k个点所在类别的出现频率<br>(5)返回前k个点出现频率最高的类别作为当前点的预测分类</p>
-<h3 id="HMM"><a href="#HMM" class="headerlink" title="HMM"></a>HMM</h3>
+        <p>note from CIPS2016</p>
+<h2 id="词法句法和语法分析"><a href="#词法句法和语法分析" class="headerlink" title="词法句法和语法分析"></a>词法句法和语法分析</h2><p>词法分析<br>  自然语言处理中的自然语言句子级分析技术，可以大致分为词法分析，句法分析和语义分析。<br>  对于词法分析（Lexical Analysis）包括了分词和词性标注。对于中文分词工作，文本中的句子以字串的形式出现，没有像英语那样明显的空格标记，对于中文，首先需要将输入的字串切分为独立的词语，然后在此基础上进行其他更高级的处理。对于词性标注，给定一个切好词的句子，词性标注的目的是为每一个词赋予一个类别，这个类别成为词性标注（Part-of-Speech tag),例如，名词（noun),动词(verb),形容词（adjective)等。属于相同词性的词，在句法中承当类似的角色。<br>
+        
+          <p class="article-more-link">
+            <a href="/2017/05/07/篇章结构/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/17/knn/" data-id="cixycdga200067kjiun02uuj0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/07/篇章结构/" data-id="cj45iw70z002i28jijs214lgt" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自然语言处理/">自然语言处理</a></li></ul>
 
     </footer>
   </div>
@@ -385,10 +149,10 @@
 
 
   
-    <article id="post-贝叶斯定理" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-句子相似度计算" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/12/17/贝叶斯定理/" class="article-date">
-  <time datetime="2016-12-17T07:57:24.000Z" itemprop="datePublished">2016-12-17</time>
+    <a href="/2017/04/30/句子相似度计算/" class="article-date">
+  <time datetime="2017-04-30T02:45:42.000Z" itemprop="datePublished">2017-04-30</time>
 </a>
     
   </div>
@@ -399,7 +163,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/17/贝叶斯定理/">模式识别课件</a>
+      <a class="article-title" href="/2017/04/30/句子相似度计算/">句子相似度计算</a>
     </h1>
   
 
@@ -407,29 +171,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="模式识别过程"><a href="#模式识别过程" class="headerlink" title="模式识别过程"></a>模式识别过程</h3><p>输入→数据采集→预处理→特征提取→分类器→分类结果</p>
-<p>！<a href="/img/bayes_1.png">模式识别系统</a></p>
-<h5 id="识别方法分类："><a href="#识别方法分类：" class="headerlink" title="识别方法分类："></a>识别方法分类：</h5><ul>
-<li>产生式模型<br>  假设不同类别的样本满足不同的概率分布，根据样本属于不同类别的概率识别样本。（贝叶斯分类器，GMM，ＨＭＭ，…）</li>
-<li>鉴别模型：<br>  利用判别函数对特征空间进行划分，不同区域对应不同的类别。（线性分类器，神经网络分类器，SVM）</li>
-</ul>
-<h3 id="各种概率及其关系"><a href="#各种概率及其关系" class="headerlink" title="各种概率及其关系"></a>各种概率及其关系</h3><pre><code>先验概率：　P(Wi)
-后验概率：　P(Wi|X)
-类条件概率：P(X｜Wi)
-贝叶斯公式：P(Wi|X)=P(X｜Wi)P(Wi)/P(X)
-</code></pre><p>判别准则：<br>    i = argmaxP(Wi|X), 则X∈Wi　<br>    P(Wj|X)=P(X｜Wj)P(Wj)/P(X)<br>    Gj(X)=P(X｜Wj)P(Wj)<br>    i = argmaxGj(X) ,则X∈Wi<br>贝叶斯分类器的错误估计：<br>    ！<a href="/img/bayes_2.png">错误率估计</a></p>
-<h3 id="朴素贝叶斯进行的文本分类"><a href="#朴素贝叶斯进行的文本分类" class="headerlink" title="朴素贝叶斯进行的文本分类"></a>朴素贝叶斯进行的文本分类</h3><p>伪代码：<br>    计算每个类别中的文档数目<br>    对每篇训练文档：<br>    　　对每个类别：<br>    　　　　如果词条出现在文档中→增加该词条的计数值<br>    　　　　增加所由词条的计数值<br>    　　对每个类别：<br>    　　　　对每个词条<br>    　　　　　　该词条的数目除以总词条数目得到条件概率<br>    返回每个类别的条件概率</p>
-<h3 id="HMM隐马尔科夫模型"><a href="#HMM隐马尔科夫模型" class="headerlink" title="HMM隐马尔科夫模型"></a>HMM隐马尔科夫模型</h3><p>应用领域：识别对象存在着先后次序信息，如语音识别，手势识别，唇读系统等<br>马尔科夫假设：模型在时刻t处于状态wj的概率完全由t-1时刻的状态wi决定，而且与时刻t无关，即：P(w(t)|wT) = P(w(t)|w(t-1))<br>隐Markov模型中，状态是不可见的，在每一个时刻t，模型当前的隐状态输出一个观察值</p>
-<p>隐马尔科夫工作原理：<br>    观察序列的产生过程：HMM的内部状态转移过程同Markov模型相同，在每次状态转移之后，由该状态输出一个观察值，只是状态转移过程无法观察到，只能观察到输出的观察值序列<br>    输出概率： 以离散的HMM为例，隐状态可能输出的观察值集合为{v1, v2, …, vK}，第i个隐状态输出第k个观察值的概率为bik。</p>
-<p>HMM的三个核心问题：<br>    估值问题：已有一个HMM模型，其参数已知，计算这个模型输出特定的观察序列VT的概率；<br>    解码问题：已有一个HMM模型，其参数已知，计算最有可能输出特定的观察序列VT的隐状态转移序列WT<br>    学习问题：已知一个HMM模型的结构，其参数未知，根据一组训练序列对参数进行训练</p>
-
+        <p>相似度计算方法：</p>
+<h2 id="Cosine-Jaccard和Shingling"><a href="#Cosine-Jaccard和Shingling" class="headerlink" title="Cosine,Jaccard和Shingling"></a>Cosine,Jaccard和Shingling</h2><p> 1.分词<br> 2.去停用词<br> 3.stem<br>
+        
+          <p class="article-more-link">
+            <a href="/2017/04/30/句子相似度计算/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/17/贝叶斯定理/" data-id="cixycdgap000t7kjiz2of4nht" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/30/句子相似度计算/" data-id="cj45iw70q001z28jia4zuq5z1" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自然语言处理/">自然语言处理</a></li></ul>
 
     </footer>
   </div>
@@ -438,16 +193,12 @@
 
 
   
-    <article id="post-ufldl-softmax" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-memory-networks" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/12/15/ufldl-softmax/" class="article-date">
-  <time datetime="2016-12-15T10:43:24.000Z" itemprop="datePublished">2016-12-15</time>
+    <a href="/2017/04/19/memory-networks/" class="article-date">
+  <time datetime="2017-04-19T02:42:58.000Z" itemprop="datePublished">2017-04-19</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/dl/">dl</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -456,7 +207,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/15/ufldl-softmax/">ufldl_softmax</a>
+      <a class="article-title" href="/2017/04/19/memory-networks/">memory networks</a>
     </h1>
   
 
@@ -464,18 +215,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="softmax"><a href="#softmax" class="headerlink" title="softmax"></a>softmax</h3><p><a href="http://ufldl.stanford.edu/wiki/index.php/Softmax%E5%9B%9E%E5%BD%92" target="_blank" rel="external">http://ufldl.stanford.edu/wiki/index.php/Softmax%E5%9B%9E%E5%BD%92</a></p>
-<p>softmax回归模型是logistic回归模型在多分类问题上的推广，在多分类问题种，类标签y可以取两个以上的值。softmax回归模型对于诸如mnist手写数字分类10个不同的单个数字问题是很有用的。softmax回归是有监督的。</p>
-<p>在logistic回归中，有m个已标记的训练集{（x(1),y(1)）,…,(x(m),y(m))}，logistic回归是针对二分类问题的，类标记y(i)属于{0,1}。假设函数(hypothesis function）可以表示为：<br>    ！<a href="/img/blog_softmax_1.png">1</a><br>将训练模型参数θ，使其能够最小化代价函数：<br>    ！<a href="/img/blog_softmax_2.png">2</a></p>
-<p>在多分类中，对于给定的测试输入x,用假设函数针对每一个类别j估算出概率值p(y=j|x).<br>假设函数要输出一个k维的向量（向量元素的和为1）来表示这k个估计的概率值。假设函数hθ（x）形式如下:<br>    ！<a href="/img/blog_softmax_3.png">3</a><br>θ1,θ2,…θk是模型参数。</p>
-
+        <p><a href="http://blog.csdn.net/u011274209/article/details/53384232">http://blog.csdn.net/u011274209/article/details/53384232</a></p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>对于很多神经网络模型，缺乏了一个长时记忆的组件方便读取和写入。作为RNN，LSTM和其变种GRU使用了一定的记忆机制。在Memory Networks的作者看来，这些记忆都太小了，因为把状态（state，也就是cell的输出）及其权重全部都嵌入到一个低维空间，把这些知识压缩成一个稠密的向量，丢失了不少信息。<br>
+        
+          <p class="article-more-link">
+            <a href="/2017/04/19/memory-networks/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/15/ufldl-softmax/" data-id="cixycdgag000j7kjijtbea9q3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/19/memory-networks/" data-id="cj45iw6ze000o28ji4eglm17g" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/read/">read</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deep-learning/">deep learning</a></li></ul>
 
     </footer>
   </div>
@@ -484,16 +237,12 @@
 
 
   
-    <article id="post-encoding" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-keras-note" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/12/14/encoding/" class="article-date">
-  <time datetime="2016-12-14T10:38:34.000Z" itemprop="datePublished">2016-12-14</time>
+    <a href="/2017/04/18/keras-note/" class="article-date">
+  <time datetime="2017-04-18T11:31:59.000Z" itemprop="datePublished">2017-04-18</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/杂/">杂</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -502,7 +251,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/14/encoding/">数据预处理:one-hot encoding</a>
+      <a class="article-title" href="/2017/04/18/keras-note/">keras_note</a>
     </h1>
   
 
@@ -510,26 +259,236 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="One-Hot-Encoding"><a href="#One-Hot-Encoding" class="headerlink" title="One-Hot Encoding"></a>One-Hot Encoding</h3><p>one-hot编码，又称为一位有效编码，对任意给定的状态，状态向量中只有一位为1，其余各位为0。主要是采用N位状态寄存器来对N个状态进行编码，每个状态都由他独立的寄存器位，并且在任意时候只有一位有效。这种状态机的速度与状态的数量无关，只取决于某特定状态的转移数量，速度很快。当状态机的状态增加时，如果使用二编码，那么速度会明显下降，但如果采用独热码，虽然多用了触发器，但由于状态译码简单，节省和简化了组合逻辑电路。<br>一个四种状态：A，B，C，D<br>独热编码就为：0001,0010,0100,1000</p>
-<p>在实际的机器学习的应用任务中，特征有时候并不总是连续值，有可能是一些分类值，如性别可分为“male”和“female”。在机器学习任务中，对于这样的特征，通常需要对其进行特征数字化，如有如下三个特征属性：</p>
-<pre><code>* 性别：[&quot;male&quot;，&quot;female&quot;]
- * 地区：[&quot;Europe&quot;，&quot;US&quot;，&quot;Asia&quot;]
-* 浏览器：[&quot;Firefox&quot;，&quot;Chrome&quot;，&quot;Safari&quot;，&quot;Internet Explorer&quot;]
-</code></pre><p>性别的属性是二维的，地区是三维的，浏览器则是四维的，这样，可以采用One-Hot编码的方式对上述的样本“[“male”，”US”，”Internet Explorer”]”编码，“male”则对应着[1，0]，同理“US”对应着[0，1，0]，“Internet Explorer”对应着[0,0,0,1]。则完整的特征数字化的结果为：[1,0,0,1,0,0,0,0,1]。这样导致的一个结果就是数据会变得非常的稀疏。</p>
-<pre><code>from sklearn import preprocessing
-enc = preprocessing.OneHotEncoder()
-enc.fit([[0,0,3],[1,1,0],[0,2,1],[1,0,2]])
-array = enc.transform([[0,1,3]]).toarray()
-print array 
-</code></pre><p>结果：[[ 1.  0.  0.  1.  0.  0.  0.  0.  1.]]</p>
-
+        <p>记录一些自己在平时使用Keras时候遇到的一些问题。<br>
+        
+          <p class="article-more-link">
+            <a href="/2017/04/18/keras-note/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/14/encoding/" data-id="cixycdg9q00027kjinv6sy8n0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/18/keras-note/" data-id="cj45iw6z6000b28jila4tn9ox" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/read/">read</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deep-learning/">deep learning</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-深度学习和自然语言处理中的attention和memory" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/17/深度学习和自然语言处理中的attention和memory/" class="article-date">
+  <time datetime="2017-04-17T10:31:24.000Z" itemprop="datePublished">2017-04-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/17/深度学习和自然语言处理中的attention和memory/">深度学习和自然语言处理中的attention</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/">http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/</a><br><a href="http://blog.csdn.net/malefactor/article/details/50550211">http://blog.csdn.net/malefactor/article/details/50550211</a></p>
+<h2 id="Encoder-Decoder"><a href="#Encoder-Decoder" class="headerlink" title="Encoder-Decoder"></a>Encoder-Decoder</h2><p>要提文本处理领域的AM模型，就不得不先谈Encoder-Decoder框架，因为目前绝大多数文献中出现的AM模型是附着在Encoder-Decoder框架下的，当然，其实AM模型可以看作一种通用的思想，本身并不依赖于Encoder-Decoder模型，这点需要注意。<br>
+        
+          <p class="article-more-link">
+            <a href="/2017/04/17/深度学习和自然语言处理中的attention和memory/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/17/深度学习和自然语言处理中的attention和memory/" data-id="cj45iw70v002928jiy9iasajo" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deep-learning/">deep learning</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-lstm-for-sentiment-Analysis" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/17/lstm-for-sentiment-Analysis/" class="article-date">
+  <time datetime="2017-04-17T07:14:01.000Z" itemprop="datePublished">2017-04-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/17/lstm-for-sentiment-Analysis/">lstm for sentiment Analysis</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Brief-Introduction"><a href="#Brief-Introduction" class="headerlink" title="Brief Introduction"></a>Brief Introduction</h2><p>RNN机器变形：<br><a href="https://arxiv.org/pdf/1506.00019.pdf">https://arxiv.org/pdf/1506.00019.pdf</a><br>网址：<a href="http://deeplearning.net/tutorial/lstm.html">http://deeplearning.net/tutorial/lstm.html</a><br>使用Theano实现的LSTM框架。<br>数据使用IMDB数据集，数据：<a href="http://ai.stanford.edu/~amaas/data/sentiment/">http://ai.stanford.edu/~amaas/data/sentiment/</a><br>根据训练的模型来预测是positive或negative,本质是二分类任务。<br>
+        
+          <p class="article-more-link">
+            <a href="/2017/04/17/lstm-for-sentiment-Analysis/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/17/lstm-for-sentiment-Analysis/" data-id="cj45iw6zb000j28jie5ype0de" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deep-learning/">deep learning</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-l1-l2正则化" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/13/l1-l2正则化/" class="article-date">
+  <time datetime="2017-04-13T01:52:30.000Z" itemprop="datePublished">2017-04-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/13/l1-l2正则化/">l1,l2正则化</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>过拟合与规则化<br>规则化是结构风险最小化策略的实现，是在经验风险上加一个正则化项(regularizer)或惩罚项(penalty term).正则化的作用是让网络偏好学习更小的权值<br>W<em> = argmin sum{L(yi,f(xi;w))}+ λ</em>Ω(w)<br>L(yi,f(xi;w))损失函数衡量模型（分类或者回归）对第i个样本的预测值f(xi;w)和真实的标签yi之前的误差，第二项是对参数w的规则化函数Ω(w)去约束模型尽量的简单。当λ较小时，偏好最小化原本的代价函数，而λ较大时我们偏好更小的权值。<br>
+        
+          <p class="article-more-link">
+            <a href="/2017/04/13/l1-l2正则化/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/13/l1-l2正则化/" data-id="cj45iw6zi000t28ji7ywghvqc" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习/">机器学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-10分钟学pandas" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/10/10分钟学pandas/" class="article-date">
+  <time datetime="2017-04-10T10:48:40.000Z" itemprop="datePublished">2017-04-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/10/10分钟学pandas/">10分钟学pandas</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>主要学习pandas使用<br>原文：<a href="http://pandas.pydata.org/pandas-docs/stable/10min.html">http://pandas.pydata.org/pandas-docs/stable/10min.html</a></p>
+<h3 id="导入相关包"><a href="#导入相关包" class="headerlink" title="导入相关包"></a>导入相关包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">import pandas as pd</div><div class="line">import numpy as np</div><div class="line">import matplotlib.pylot as plt</div></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2017/04/10/10分钟学pandas/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/10/10分钟学pandas/" data-id="cj45iw6yu000428jivymf8sxz" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-主成分分析" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/23/主成分分析/" class="article-date">
+  <time datetime="2017-03-23T14:04:47.000Z" itemprop="datePublished">2017-03-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/23/主成分分析/">主成分分析</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="主成分分析（PCA）"><a href="#主成分分析（PCA）" class="headerlink" title="主成分分析（PCA）"></a>主成分分析（PCA）</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><a href="http://ufldl.stanford.edu/wiki/index.php/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90">http://ufldl.stanford.edu/wiki/index.php/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90</a><br>
+        
+          <p class="article-more-link">
+            <a href="/2017/03/23/主成分分析/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/23/主成分分析/" data-id="cj45iw70k001t28jicinx4z90" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习/">机器学习</a></li></ul>
 
     </footer>
   </div>
@@ -541,7 +500,7 @@ print array
 
 
   <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
   </nav>
 </section>
         
@@ -549,7 +508,7 @@ print array
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/dl/">dl</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂/">杂</a></li></ul>
     </div>
@@ -559,9 +518,9 @@ print array
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn/">learn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/read/">read</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deeplearning/">deeplearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn/">learn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/read/">read</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tensorflow-note/">tensorflow_note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自然语言处理/">自然语言处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
     </div>
   </div>
 
@@ -569,9 +528,9 @@ print array
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/tags/learn/" style="font-size: 10px;">learn</a> <a href="/tags/note/" style="font-size: 10px;">note</a> <a href="/tags/read/" style="font-size: 15px;">read</a> <a href="/tags/读书笔记/" style="font-size: 20px;">读书笔记</a>
+      <a href="/tags/deep-learning/" style="font-size: 16.67px;">deep learning</a> <a href="/tags/deeplearning/" style="font-size: 10px;">deeplearning</a> <a href="/tags/learn/" style="font-size: 10px;">learn</a> <a href="/tags/note/" style="font-size: 11.67px;">note</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/read/" style="font-size: 10px;">read</a> <a href="/tags/tensorflow-note/" style="font-size: 15px;">tensorflow_note</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a> <a href="/tags/自然语言处理/" style="font-size: 18.33px;">自然语言处理</a> <a href="/tags/读书笔记/" style="font-size: 11.67px;">读书笔记</a>
     </div>
   </div>
 
@@ -580,7 +539,7 @@ print array
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li></ul>
     </div>
   </div>
 
@@ -588,28 +547,28 @@ print array
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/01/10/pythonnote/">pythonnote</a>
+            <a href="/2017/05/20/end2end-relation-extractio-lstm/">End-to-End Relation Extraction using LSTMs on Sequences and Tree Structures</a>
           </li>
         
           <li>
-            <a href="/2017/01/06/gbdt/">gbdt</a>
+            <a href="/2017/05/07/篇章结构/">词法、句法、语法</a>
           </li>
         
           <li>
-            <a href="/2017/01/05/vsm/">vsm</a>
+            <a href="/2017/04/30/句子相似度计算/">句子相似度计算</a>
           </li>
         
           <li>
-            <a href="/2017/01/05/mlcourse-3/">mlcourse-3</a>
+            <a href="/2017/04/19/memory-networks/">memory networks</a>
           </li>
         
           <li>
-            <a href="/2016/12/29/crf/">crf</a>
+            <a href="/2017/04/18/keras-note/">keras_note</a>
           </li>
         
       </ul>
@@ -625,7 +584,7 @@ print array
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Zheng GuiDong<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
